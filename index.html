@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Roboto|Abril+Fatface|Old+Standard+TT|Cutive|Arvo|Dosis|Quicksand|Slabo+27px" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="maincontainer">
+		<h1> AIR POLLUTION IN WARSAW </h1>
+		<p> Bars are sized by the amount of the PM10 dust detected in the atmosphere. The starting point of a bar denotes the minimum value of PM10 and its height denotes the maximum amount of the dust in the atmosphere reported on a given day. The color of the bars denotes the average daily amount of PM10 dust in the atmosphere. <br><br>
+
+		Gray circles represent the amount of benzene, highly harmful cancerogenic substance, in the atmosphere. The bigger the circle, the higher the concentration of the substance. See the legend below for details.<br><br></p>
+
+		<div id = "viz"></div>
+	</div>
+	<div class="footer">
+		<p>Data source: GIOŚ http://powietrze.gios.gov.pl/. <br> Measurement station: al. Niepodległości 227/233, Warsaw.</p>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+	<script src="js/plot.js"></script>
+	<script src="js/legend.js"></script>
+</body>
+</html>

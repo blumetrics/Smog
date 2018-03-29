@@ -1,0 +1,111 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  font: 10px sans-serif;
+  background: #f2f2ef;
+  text-align: justify;
+}
+
+p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  
+}
+
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 45px;
+  color: #e74747;
+  font-weight: bold;
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  font-family: 'Slabo 27px', serif;
+  font-size: 8px;
+}
+
+.x.axis path {
+  display: none;
+}
+
+#tt { 
+  pointer-events: none;
+  color:white;
+}
+
+span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+#maincontainer {
+  max-width: 700px;
+  margin: auto;
+}
+
+#viz {
+  margin: auto;
+}
+
+#tt2 { 
+  pointer-events: none;
+  color:white;
+}
+
+.text-tooltip1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  color: #37383a;
+}
+
+.text-tooltip2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  font-color: #37383a;;
+}
+
+.text-tooltip3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  color: #37383a;
+}
+
+.temperature{
+  color: white;
+}
+
+.axis path,
+.axis tick,
+.axis line {
+    fill: none;
+    stroke: none;
+}
+
+.tipClear { clear:both;}
+
+.circle-legend line {
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.circle-legend circle {
+  stroke: #a39797;
+  fill: none;
+}
+
+.footer {
+  font: 10px sans-serif;
+  text-align: center;
+}
+
+.circle-legend line {
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.circle-legend circle {
+  stroke: #a39797;
+  fill: none;
+}
