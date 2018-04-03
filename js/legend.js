@@ -8,14 +8,13 @@ var tempScale = d3.scale.linear()
   .range([0, width]);
 
 //Calculate the variables for the temp gradient
-
 var numStops = 50;
 tempRange = tempScale.domain();
 tempRange[2] = tempRange[1] - tempRange[0];
 tempPoint = [];
 for(var i = 0; i < numStops; i++) {
   tempPoint.push(i * tempRange[2]/(numStops-1) + tempRange[0]);
-}//for i
+}
 
 var colorScale = d3.scale.linear()
   .domain(ticks2)
@@ -245,7 +244,7 @@ svg.append("text")
   .attr("x", 150)
   .attr("y", 400)
   .style("text-anchor", "middle")
-  .text("Average Daily Benzen Emission");
+  .text("Average Daily Benzene Emission");
 
 svg.append('g')
   .attr('transform', 'translate(150, 470)')
