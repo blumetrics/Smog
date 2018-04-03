@@ -42,7 +42,7 @@ d3.csv("data/wwa.csv", function(error, data) {
   });
 
   var arc = d3.svg.arc()
-    .startAngle(function(d) { return 0; })
+    	  .startAngle(function(d) { return 0; })
 	  .endAngle(function(d) { return ((2 * Math.PI) / (data.length)); })
 	  .innerRadius(function(d) { return x(d["ug_min"]); })
 	  .outerRadius(function(d) { return x(d["ug_max"]); });
@@ -91,7 +91,6 @@ d3.csv("data/wwa.csv", function(error, data) {
   var temperatures = svg.selectAll(".temperature")
     .data(data)
     .enter().append("g")
-    //.attr("class","temperature")
     .attr("transform", function(d, i) { return "rotate(" + (i * 360 / data.length) + ")"; })
     .on("mouseover", function (d) {
       return toolOver(d, this);
@@ -105,7 +104,7 @@ d3.csv("data/wwa.csv", function(error, data) {
         .text("PM10: " + d3.round(d["ug_mean"], 2) + " ug");
 
       svg.select("text.text-tooltip3")
-        .text("Benzen: " + d3.round(d["Precipitationmm"], 2) + " ug");
+        .text("Benzene: " + d3.round(d["pollutionPM"], 2) + " ug");
 
       svg.select("circle.ccc")
         .attr("fill", color(d["ug_mean"]));
@@ -125,17 +124,17 @@ d3.csv("data/wwa.csv", function(error, data) {
     .style("fill", function(d) { return color(d["ug_mean"]); })
     .attr("d", arc);
     
-  var precipitations = svg.selectAll(".precipitation")
+  var pollution = svg.selectAll(".precipitation")
     .append('g')
     .data(data)
     .enter().append("g")
-    .attr("class","precipitation")
+    .attr("class","pollution")
 	  .attr("transform", function(d, i) { return "rotate(" + (i * 360 / data.length) + ")"; });
 
-  precipitations.append("circle")
+  pollution.append("circle")
     .attr("cx",0)
     .attr("cy",function(d) { return -x(d["ug_mean"]); })
-	  .attr("r", function(d) { return r(d["Precipitationmm"]); })
+	  .attr("r", function(d) { return r(d["pollutionPM"]); })
 	  .style("opacity", .3)
     .style("pointer-events", "none")
   	.style("fill", "#918d8a");
