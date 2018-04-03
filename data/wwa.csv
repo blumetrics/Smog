@@ -1,4 +1,4 @@
-data,ug_mean,ug_max,ug_min,Precipitationmm,ug_max2,
+data,ug_mean,ug_max,ug_min,pollutionPM,ug_max2,
 1/1/2016,45.2173913,101.7,25.4,42.2,101.7,101.7
 1/2/2016,47.00833333,79.6,30.5,24.8,79.6,79.6
 1/3/2016,51.44166667,82.3,27.9,,82.3,82.3
